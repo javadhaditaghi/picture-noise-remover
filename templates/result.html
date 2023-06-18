@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Resulted Picture</h1>
+        <img src="{{ url_for('get_result') }}" alt="Result" class="result-image">
+    </div>
+</body>
+</html>

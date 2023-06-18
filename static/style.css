@@ -1,0 +1,101 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #3c6de9, #0068c9);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    max-width: 500px;
+}
+
+h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.app-description {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.file-label {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #555;
+    font-weight: bold;
+}
+
+.file-input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    width: 100%;
+    max-width: 300px;
+}
+
+.submit-button {
+    padding: 12px 24px;
+    background-color: #3c6de9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+.submit-button:hover {
+    background-color: #0068c9;
+}
+
+.submit-button:active {
+    transform: translateY(2px);
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 120px;
+    background-color: #3c6de9;
+    border-radius: 50%;
+    opacity: 0.15;
+    z-index: -1;
+}
+
+.container::after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    background-color: #3c6de9;
+    border-radius: 50%;
+    opacity: 0.1;
+    z-index: -1;
+}

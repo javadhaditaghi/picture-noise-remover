@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Picture Noise Remover</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Picture Noise Remover</h1>
+        <p class="app-description">The Picture Noise Remover app is a powerful tool
+            designed to help you remove noise from your pictures effortlessly.
+            Whether you're dealing with grainy images or unwanted artifacts,
+            this app offers a simple and effective solution to
+            enhance the visual quality of your photos.</p>
+        <form action="/process" method="post" enctype="multipart/form-data" onsubmit="return validateForm();">
+            <label for="pictures" class="file-label">Select Pictures:</label>
+            <input type="file" name="pictures" id="pictures" multiple class="file-input">
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+        <div id="error-message" class="error-message"></div>
+    </div>
+
+    <script>
+        function validateForm() {
+            var fileInput = document.getElementById('pictures');
+            var errorMessage = document.getElementById('error-message');
+            if (fileInput.files.length === 0) {
+                errorMessage.textContent = 'No pictures uploaded';
+                return false;
+            }
+            errorMessage.textContent = '';
+            return true;
+        }
+    </script>
+</body>
+</html>
